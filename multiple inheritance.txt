@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class University {
+public:
+    void displayUniversity() {
+        cout << "University: SIU University" << endl;
+    }
+};
+
+class Institute {
+public:
+    void displayInstitute() {
+        cout << "Institute: SIT Institute" << endl;
+    }
+};
+
+class Student : public University, public Institute {
+public:
+    void displayStudent() {
+        cout << "Student:"<< endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.displayUniversity();
+    s.displayInstitute();
+    s.displayStudent();
+    return 0;
+}
