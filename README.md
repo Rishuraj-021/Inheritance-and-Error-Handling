@@ -1,4 +1,4 @@
-# Inheritance-and-Error-Handling
+# Inheritance
 ## Aim:
 To study and implement the concepts of Inheritance and Error Handling in C++.
 
