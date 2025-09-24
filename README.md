@@ -1,96 +1,87 @@
 # Inheritance
 ## Aim:
-To study and implement the concepts of Inheritance and Error Handling in C++.
+
+To study and implement the concept of Inheritance in C++ and understand how one class can acquire the properties and functionalities of another class to promote code reusability and extensibility.
 
 ## Theory:
-### 🔹 Inheritance
 
-Inheritance is one of the fundamental features of Object-Oriented Programming (OOP).
+Inheritance is one of the core features of Object-Oriented Programming (OOP) in C++. It allows a new class (called the derived class) to acquire the properties (data members) and behaviors (member functions) of an existing class (called the base class).
 
-It allows a class (called the derived class) to acquire the properties and behaviors (data members and member functions) of another class (called the base class).
+This promotes code reusability, extensibility, and establishes a hierarchical relationship between classes.
 
-The main advantage is reusability: code written once in a base class can be reused in derived classes.
+Key Concepts
 
-Inheritance also supports the concept of hierarchy and helps implement polymorphism.
+Base Class (Parent/Superclass): The class whose features are inherited.
 
-Types of Inheritance in C++:
+Derived Class (Child/Subclass): The class that inherits the features of the base class.
 
-Single Inheritance – One base class and one derived class.
+Access Specifiers in Inheritance:
 
-Multiple Inheritance – A derived class inherits from more than one base class.
+Public Inheritance: Public members → remain public, Protected → remain protected, Private not inherited.
 
-Multilevel Inheritance – A class is derived from another derived class (grandparent → parent → child).
+Protected Inheritance: Public & Protected of base → become protected in derived.
 
-Hierarchical Inheritance – Multiple classes are derived from a single base class.
+Private Inheritance: Public & Protected of base → become private in derived.
 
-Hybrid Inheritance – A combination of more than one type of inheritance.
+### Types of Inheritance:
 
-#### Advantages:
+Single Inheritance – One base class, one derived class.
 
-Promotes code reusability.
+Multiple Inheritance – One derived class inherits from multiple base classes.
 
-Provides a natural way to model real-world relationships.
+Multilevel Inheritance – A derived class becomes a base class for another class.
 
-Makes code easier to extend and maintain.
+Hierarchical Inheritance – Multiple derived classes inherit from one base class.
 
-### 🔹 Error Handling
+Hybrid Inheritance – Combination of two or more types of inheritance.
 
-Errors are unexpected situations that may occur during the execution of a program (like division by zero, invalid input, file not found, etc.).
+### Advantages of Inheritance:
 
-In C++, errors can be handled using the exception handling mechanism (try, catch, throw).
+Promotes code reusability by using existing code in new classes.
 
-This ensures that instead of a program crashing on error, it can handle the error gracefully and continue execution.
+Reduces redundancy and saves development time.
 
-Keywords used in Error Handling:
+Improves program organization using hierarchical structures.
 
-try → Defines a block of code to be tested for errors.
+Supports the concept of polymorphism.
 
-throw → Used to signal (raise) an exception when an error occurs.
+Disadvantages of Inheritance
 
-catch → Defines a block of code to handle the exception.
+Increases program complexity in deep inheritance hierarchies.
 
-#### Advantages:
+May introduce dependency between base and derived classes.
 
-Prevents program from abnormal termination.
+Improper use may lead to confusion in large programs.
 
-Provides a structured way to handle runtime errors.
+Examples of Inheritance Use
 
-Increases the robustness and reliability of software.
+Creating specialized classes from a general class (e.g., Vehicle → Car, Bike).
 
-## Algorithm:
+GUI frameworks (base window class extended into buttons, text boxes, etc.).
 
-Start the program.
+File handling, exception handling, and reusable libraries.
 
-For Inheritance:
+## Algorithm :
 
-Define a base class with data members and member functions.
+Start.
 
-Define a derived class that inherits from the base class.
+Define the base class with data members and member functions.
 
-Use inheritance (single, multiple, or multilevel) to demonstrate reusability.
+Define the derived class using syntax:
 
-Access base class members through derived class objects.
+class Derived : access-specifier Base
 
-#### For Error Handling:
 
-Identify operations that may generate runtime errors (e.g., division by zero, invalid input).
+The derived class can access the properties and functions of the base class (according to access specifier).
 
-Place such operations inside a try block.
+Create an object of the derived class.
 
-Use throw to raise an exception if an error occurs.
+Access base and derived class members using this object.
 
-Handle the exception using a catch block.
+Stop.
 
-Display the results of inheritance and error handling.
 
-Stop the program.
 
 ## Conclusion:
 
-From this experiment, we conclude that:
-
-Inheritance allows a class to reuse the properties and functions of another class, supporting the concept of code reusability, extensibility, and hierarchy.
-
-Error Handling using try, catch, and throw makes programs more reliable and prevents abnormal termination during runtime errors.
-
-Both inheritance and error handling are powerful features of C++ that make programs robust, efficient, and maintainable.
+Inheritance in C++ is a key OOP principle that allows one class to reuse the features of another, thereby reducing redundancy and promoting modularity. It supports extensibility, scalability, and polymorphism. While inheritance makes programs more organized and manageable, it should be used carefully to avoid complexity and tight coupling. Mastering inheritance is essential for understanding advanced OOP concepts such as polymorphism, virtual functions, and abstract classes.
