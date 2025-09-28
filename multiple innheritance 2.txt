@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Company {
+protected:
+    string CompanyName;
+public:
+    Company(string cname = "LMX") {
+        CompanyName = cname;
+        cout << "Company Name is " << CompanyName << ".\n";
+    }
+};
+
+class Employee {
+public:
+    Employee() {
+        cout << "Name of the employee is Vijay.\n";
+    }
+};
+
+class Salary : public Company, public Employee {
+public:
+    Salary() {
+        cout << "His salary is 200000.\n";
+    }
+};
+
+int main() {
+    Salary obj;
+    return 0;
+}
+
+
+
+/* OUTPUT
+Company Name is LMX.
+Name of the employee is Vijay.
+His salary is 200000. */
